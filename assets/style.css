@@ -1,0 +1,217 @@
+:root {
+    /* Farbpalette direkt aus dem Cubalance-Screenshot */
+    --bg-main: #121214;
+    --card-bg: #1e1e24;
+    --text-primary: #f5f6f8;
+    --text-secondary: #a0a5b5;
+    
+    /* Cube-Farben für Akzente */
+    --cube-yellow: #e5c143;
+    --cube-red: #c95261;
+    --cube-blue: #3b59c4;
+    --cube-green: #67cf9a;
+    --cube-orange: #df8544;
+    --cube-purple: #a85ee3;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--bg-main);
+    /* Bindet dein transparentes Muster über dem dunklen Hintergrund ein */
+    background-image: url('bg-pattern.png');
+    background-repeat: repeat;
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+h1, h2, h3, .nav-logo {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+}
+
+/* Header & Navigation */
+header {
+    background-color: rgba(30, 30, 36, 0.95);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--cube-blue);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.site-logo {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--cube-yellow);
+}
+
+.lang-switch {
+    background: var(--card-bg);
+    border: 2px solid var(--text-secondary);
+    color: var(--text-primary);
+    padding: 5px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.lang-switch:hover {
+    border-color: var(--cube-green);
+    color: var(--cube-green);
+}
+
+/* Main Layout & Content-Cards */
+.main-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.content-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-left: 5px solid var(--cube-purple);
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--cube-yellow);
+}
+
+p {
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+    font-size: 18px;
+}
+
+/* Download-Buttons */
+.store-badges {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-playstore { background-color: #a4c639; }
+.btn-steam { background-color: #171a21; border: 1px solid #3a3a3a; }
+
+/* Social Icons Footer */
+.social-footer {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--card-bg);
+    border-radius: 50%;
+    color: var(--text-primary);
+    font-size: 20px;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+    background-color: var(--cube-blue);
+    color: white;
+}
+
+footer p {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+footer a {
+    color: var(--cube-orange);
+    text-decoration: none;
+}
+
+/* Mobile-Optimierung für kleine Bildschirme */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav {
+        justify-content: center;
+    }
+    .content-card {
+        padding: 25px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+}
