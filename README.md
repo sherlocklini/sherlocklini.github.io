@@ -1,2 +1,2 @@
-# cubalance.github.io
-Official website for Cubalance by sherlocklini.
+# sherlocklini.github.io
+Official website of sherlocklini games.
