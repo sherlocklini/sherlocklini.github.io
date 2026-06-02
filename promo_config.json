@@ -1,8 +1,8 @@
 {
   "active_event": "cloud_save_update_june_2026",
   "is_live": true,
-  "start_date_utc": "2026-06-01T00:00:00Z",
-  "end_date_utc": "2026-06-17T23:59:59Z",
+  "start_date_utc": "1780315260",
+  "end_date_utc": "1781740799",
   "featured_skins": [
     "Tubby",
     "Summer",
