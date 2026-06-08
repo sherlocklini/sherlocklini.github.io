@@ -41,6 +41,52 @@
         </div>
     </div>
 
+<section class="feedback-section">
+  <div class="feedback-container">
+    <h1 class="feedback-title">GAME FEEDBACK</h1>
+    
+    <p class="feedback-subtitle">
+      Use this form to report a bug, to send a suggestion or to summarize general comments about Cubalance. Thank you!
+    </p>
+
+    <form action="https://formspree.io/f/YOUR_UNIQUE_FORM_ID" method="POST" enctype="multipart/form-data">
+      
+      <div class="form-group">
+        <label class="form-label">Feedback Type <span class="required">(required)</span></label>
+        <p class="form-help">If you are reporting a bug, please list the steps to reproduce the bug to help the development team fix it.</p>
+        <select name="feedback_type" required class="form-select">
+          <option value="" disabled selected>Select an option</option>
+          <option value="Bug Report">Bug Report</option>
+          <option value="Suggestion">Suggestion</option>
+          <option value="General Comment">General Comment</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Feedback Description <span class="required">(required)</span></label>
+        <p class="form-help warning-text">⚠️ If you are reporting a bug, make sure to describe the steps to reproduce the bug to help us fix it. Thank you! ⚠️</p>
+        <textarea name="description" required class="form-textarea" rows="6"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Screenshot Upload</label>
+        <p class="form-help">You can upload a screenshot if you feel it illustrates your feedback better.</p>
+        <div class="file-upload-zone">
+          <input type="file" name="screenshot" id="screenshot-input" accept="image/*" class="file-input">
+          <label for="screenshot-input" class="file-label">
+            <span class="upload-icon">+</span>
+            <span class="upload-text">Add a File</span>
+          </label>
+        </div>
+      </div>
+
+      <input type="text" name="_gotcha" style="display:none">
+
+      <button type="submit" class="btn-submit">SEND FEEDBACK</button>
+    </form>
+  </div>
+</section>
+
     <footer class="social-footer">
         <ul class="social-links">
             <li><a href="https://www.instagram.com/sherlocklini" target="_blank"><i class="fab fa-instagram"></i></a></li>
@@ -50,6 +96,8 @@
         </ul>
         <p>&copy; 2026 Sherlocklini Games. Built with Godot. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
     </footer>
+
+    
 
 </body>
 </html>
