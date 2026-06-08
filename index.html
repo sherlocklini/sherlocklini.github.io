@@ -39,53 +39,61 @@
                 </a>
             </div>
         </div>
-    </div>
 
-<section class="feedback-section">
-  <div class="feedback-container">
-    <h1 class="feedback-title">GAME FEEDBACK</h1>
-    
-    <p class="feedback-subtitle">
-      Use this form to report a bug, to send a suggestion or to summarize general comments about Cubalance. Thank you!
-    </p>
+        <div class="content-card feedback-card">
+            <h2>Game Feedback</h2>
+            <p class="section-desc">Use this form to report a bug, to send a suggestion or to summarize general comments about Cubalance. Thank you!</p>
 
-    <form action="https://formspree.io/f/YOUR_UNIQUE_FORM_ID" method="POST" enctype="multipart/form-data">
-      
-      <div class="form-group">
-        <label class="form-label">Feedback Type <span class="required">(required)</span></label>
-        <p class="form-help">If you are reporting a bug, please list the steps to reproduce the bug to help the development team fix it.</p>
-        <select name="feedback_type" required class="form-select">
-          <option value="" disabled selected>Select an option</option>
-          <option value="Bug Report">Bug Report</option>
-          <option value="Suggestion">Suggestion</option>
-          <option value="General Comment">General Comment</option>
-        </select>
-      </div>
+            <div data-fs-success class="form-status success-message" style="display: none;">
+                <i class="fas fa-check-circle"></i> Thank you! Your feedback has been sent successfully.
+            </div>
+            <div data-fs-error class="form-status error-message" style="display: none;">
+                <i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again.
+            </div>
 
-      <div class="form-group">
-        <label class="form-label">Feedback Description <span class="required">(required)</span></label>
-        <p class="form-help warning-text">⚠️ If you are reporting a bug, make sure to describe the steps to reproduce the bug to help us fix it. Thank you! ⚠️</p>
-        <textarea name="description" required class="form-textarea" rows="6"></textarea>
-      </div>
+            <form id="feedback-form" action="https://formspree.io/f/xaqzobno" method="POST" enctype="multipart/form-data">
+                
+                <div class="form-group">
+                    <label for="feedback_type" class="form-label">Feedback Type <span class="required">(required)</span></label>
+                    <span class="form-help">If you are reporting a bug, please list the steps to reproduce the bug to help the development team fix it.</span>
+                    <div class="select-wrapper">
+                        <select id="feedback_type" name="feedback_type" required data-fs-field class="form-control">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="Bug Report">Bug Report</option>
+                            <option value="Suggestion">Suggestion</option>
+                            <option value="General Comment">General Comment</option>
+                        </select>
+                    </div>
+                    <span data-fs-error="feedback_type" class="field-error"></span>
+                </div>
 
-      <div class="form-group">
-        <label class="form-label">Screenshot Upload</label>
-        <p class="form-help">You can upload a screenshot if you feel it illustrates your feedback better.</p>
-        <div class="file-upload-zone">
-          <input type="file" name="screenshot" id="screenshot-input" accept="image/*" class="file-input">
-          <label for="screenshot-input" class="file-label">
-            <span class="upload-icon">+</span>
-            <span class="upload-text">Add a File</span>
-          </label>
+                <div class="form-group">
+                    <label for="description" class="form-label">Feedback Description <span class="required">(required)</span></label>
+                    <span class="form-help warning-text">⚠️ If you are reporting a bug, make sure to describe the steps to reproduce the bug to help us fix it. Thank you! ⚠️</span>
+                    <textarea id="description" name="description" required data-fs-field class="form-control" rows="6" placeholder="Write your feedback here..."></textarea>
+                    <span data-fs-error="description" class="field-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Screenshot Upload</label>
+                    <span class="form-help">You can upload a screenshot if you feel it illustrates your feedback better.</span>
+                    <div class="file-upload-zone">
+                        <input type="file" name="screenshot" id="screenshot-input" accept="image/*" class="file-input">
+                        <label for="screenshot-input" class="file-label">
+                            <i class="fas fa-plus upload-icon"></i>
+                            <span class="upload-text">Add a File</span>
+                        </label>
+                    </div>
+                </div>
+
+                <input type="text" name="_gotcha" style="display:none">
+
+                <button type="submit" data-fs-submit-btn class="btn btn-submit-feedback">
+                    <i class="fas fa-paper-plane"></i> Send Feedback
+                </button>
+            </form>
         </div>
-      </div>
-
-      <input type="text" name="_gotcha" style="display:none">
-
-      <button type="submit" class="btn-submit">SEND FEEDBACK</button>
-    </form>
-  </div>
-</section>
+    </div>
 
     <footer class="social-footer">
         <ul class="social-links">
@@ -97,7 +105,14 @@
         <p>&copy; 2026 Sherlocklini Games. Built with Godot. <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
     </footer>
 
-    
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { 
+            formElement: '#feedback-form', 
+            formId: 'xaqzobno'
+        });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
