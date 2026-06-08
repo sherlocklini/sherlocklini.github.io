@@ -199,6 +199,151 @@ footer a {
     text-decoration: none;
 }
 
+
+/* Feedback Form Styling */
+.feedback-section {
+    background-color: #ffffff;
+    font-family: 'Arial', sans-serif; /* Adjust to match your site's font */
+    padding: 40px 20px;
+    color: #333333;
+}
+
+.feedback-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.feedback-title {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.feedback-subtitle {
+    font-size: 1.1rem;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #555555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.required {
+    color: #999999;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.form-help {
+    font-size: 0.9rem;
+    color: #999999;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.warning-text {
+    color: #d97706; /* Golden/Amber color for the warning */
+}
+
+/* Input Fields */
+.form-select, .form-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    font-size: 1.1rem;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.form-select {
+    height: 50px;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+    padding-right: 45px;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Drag & Drop File Zone */
+.file-upload-zone {
+    position: relative;
+    border: 2px dashed #aaaaaa;
+    padding: 30px;
+    text-align: center;
+    background-color: #fafafa;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.file-upload-zone:hover {
+    border-color: #666666;
+}
+
+.file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.upload-icon {
+    font-size: 2rem;
+    color: #aaaaaa;
+    margin-bottom: 5px;
+}
+
+.upload-text {
+    font-size: 1.1rem;
+    color: #666666;
+}
+
+/* Submit Button */
+.btn-submit {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+    background-color: #333333;
+}
+
+
 /* Mobile-Optimierung für kleine Bildschirme */
 @media (max-width: 768px) {
     .nav-container {
