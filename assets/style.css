@@ -115,7 +115,7 @@ nav a:hover {
 }
 
 .feedback-card {
-    border-left: 5px solid var(--cube-green); /* Differentiate the feedback module with a green tone accent */
+    border-left: 5px solid var(--cube-green);
 }
 
 h1 {
@@ -141,7 +141,7 @@ p {
     margin-bottom: 30px;
 }
 
-/* Download-Buttons & Form Button Base */
+/* Download-Buttons */
 .store-badges {
     display: flex;
     gap: 20px;
@@ -173,7 +173,7 @@ p {
 .btn-playstore { background-color: #a4c639; }
 .btn-steam { background-color: #171a21; border: 1px solid #3a3a3a; }
 
-/* Native Cubalance Feedback Form Elements */
+/* Custom Form Elements */
 .form-group {
     margin-bottom: 25px;
     display: flex;
@@ -205,7 +205,6 @@ p {
     color: var(--cube-orange);
 }
 
-/* Inputs, Textareas and Dropdowns natively integrated */
 .form-control {
     width: 100%;
     padding: 14px 16px;
@@ -225,7 +224,7 @@ p {
     box-shadow: 0 0 8px rgba(103, 207, 154, 0.2);
 }
 
-/* Custom Dropdown Styling */
+/* Custom Dropdown Arrow */
 .select-wrapper {
     position: relative;
     width: 100%;
@@ -252,64 +251,13 @@ select.form-control {
 
 textarea.form-control {
     resize: vertical;
-    min-height: 130px;
+    min-height: 140px;
 }
 
-/* Styled File Upload Dropzone */
-.file-upload-zone {
-    position: relative;
-    border: 2px dashed #4e4e5a;
-    border-radius: 12px;
-    padding: 30px;
-    text-align: center;
-    background-color: rgba(18, 18, 20, 0.3);
-    cursor: pointer;
-    transition: border-color 0.2s, background-color 0.2s;
-}
-
-.file-upload-zone:hover {
-    border-color: var(--cube-blue);
-    background-color: rgba(59, 89, 196, 0.05);
-}
-
-.file-input {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.file-label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    gap: 8px;
-}
-
-.upload-icon {
-    font-size: 24px;
-    color: var(--text-secondary);
-    transition: color 0.2s;
-}
-
-.file-upload-zone:hover .upload-icon {
-    color: var(--cube-blue);
-}
-
-.upload-text {
-    font-family: 'Fredoka', sans-serif;
-    font-size: 16px;
-    color: var(--text-primary);
-}
-
-/* Submit Feedback Button customization */
+/* Submit Action Button styling */
 .btn-submit-feedback {
     background-color: var(--cube-green);
-    color: #121214; /* High contrast text on neon green */
+    color: #121214;
     margin-top: 15px;
     width: auto;
 }
@@ -327,7 +275,7 @@ textarea.form-control {
     box-shadow: none;
 }
 
-/* AJAX Formspree Status Banner UI */
+/* Feedback Alert Banner Styling */
 .form-status {
     padding: 15px 20px;
     border-radius: 10px;
@@ -349,12 +297,6 @@ textarea.form-control {
     background-color: rgba(201, 82, 97, 0.15);
     border: 2px solid var(--cube-red);
     color: var(--cube-red);
-}
-
-.field-error {
-    color: var(--cube-red);
-    font-size: 14px;
-    margin-top: 5px;
 }
 
 /* Social Icons Footer */
