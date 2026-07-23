@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubalance - Press Kit</title>
+    <style>
+        :root {
+            --bg-color: #121214;
+            --card-bg: #1e1e24;
+            --accent-color: #f39c12;
+            --text-color: #e0e0e0;
+            --text-muted: #a0a0a0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            border-bottom: 2px solid #2a2a32;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            color: var(--accent-color);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        .factsheet table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .factsheet td {
+            padding: 8px 0;
+            vertical-align: top;
+        }
+
+        .factsheet td:first-child {
+            font-weight: bold;
+            color: var(--text-muted);
+            width: 40%;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            opacity: 0.9;
+        }
+
+        a {
+            color: var(--accent-color);
+        }
+
+        .nav-back {
+            margin-bottom: 20px;
+            display: inline-block;
+            text-decoration: none;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="index.html" class="nav-back">← Back to Main Page</a>
+
+    <header>
+        <h1>Cubalance</h1>
+        <div class="subtitle">Press Kit & Media Factsheet</div>
+    </header>
+
+    <div class="grid">
+        <!-- Main Content -->
+        <main>
+            <section class="card">
+                <h2>Description</h2>
+                <p>
+                    <strong>Cubalance</strong> is a physics-based Match-3 puzzle game where classic color-matching collides with dynamic weight distribution on floating seesaw scales. Players must manage physical momentum to tip scales, catapult blocks across the screen, clear handcrafted adventure puzzles, or sabotage opponents in chaotic split-screen local PvP.
+                </p>
+            </section>
+
+            <section class="card">
+                <h2>Key Features</h2>
+                <ul>
+                    <li><strong>Physics-Driven Matching:</strong> Color matching meets dynamic gravity where every block carries physical weight.</li>
+                    <li><strong>Strategic Momentum:</strong> Overload seesaw platforms to catapult blocks across the screen or trigger chain reactions.</li>
+                    <li><strong>Versatile Modes:</strong> Features handcrafted Adventure Mode puzzles, endless high-score endurance modes, and split-screen local PvP (with Steam Remote Play Together support).</li>
+                    <li><strong>Level Editor & Steam Workshop:</strong> Full in-game toolset to build and share custom physics stages with the community.</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>Videos & Trailers</h2>
+                <p>Check out our latest gameplay trailer on YouTube or download video assets below:</p>
+                <!-- Replace with your YouTube embed code or trailer link -->
+                <p><a href="https://store.steampowered.com/app/YOUR_APP_ID" target="_blank">Watch Trailer on Steam</a></p>
+            </section>
+
+            <section class="card">
+                <h2>Media Downloads</h2>
+                <p>Download high-resolution screenshots, logos, key art, and trailer clips in a single zip file:</p>
+                <a href="#" class="button">Download Press Kit (.ZIP)</a>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 8px;">
+                    <em>Tip: Replace the '#' link with your Google Drive / Dropbox link containing media assets.</em>
+                </p>
+            </section>
+        </main>
+
+        <!-- Sidebar / Factsheet -->
+        <aside>
+            <section class="card factsheet">
+                <h2>Factsheet</h2>
+                <table>
+                    <tr>
+                        <td>Developer</td>
+                        <td>Sherlocklini</td>
+                    </tr>
+                    <tr>
+                        <td>Release Date</td>
+                        <td>To Be Announced</td>
+                    </tr>
+                    <tr>
+                        <td>Platforms</td>
+                        <td>PC (Steam)</td>
+                    </tr>
+                    <tr>
+                        <td>Engine</td>
+                        <td>Godot Engine 4</td>
+                    </tr>
+                    <tr>
+                        <td>Store Page</td>
+                        <td><a href="https://store.steampowered.com/app/YOUR_APP_ID" target="_blank">Steam Store</a></td>
+                    </tr>
+                    <tr>
+                        <td>Contact</td>
+                        <td><a href="mailto:your-email@domain.com">Email Us</a></td>
+                    </tr>
+                </table>
+            </section>
+        </aside>
+    </div>
+</div>
+
+</body>
+</html>
